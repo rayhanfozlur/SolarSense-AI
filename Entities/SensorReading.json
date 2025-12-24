@@ -1,0 +1,50 @@
+{
+  "name": "SensorReading",
+  "type": "object",
+  "properties": {
+    "site_id": {
+      "type": "string",
+      "description": "Reference to SolarSite"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "voltage": {
+      "type": "number",
+      "description": "Panel voltage in V"
+    },
+    "current": {
+      "type": "number",
+      "description": "Current in A"
+    },
+    "power_output": {
+      "type": "number",
+      "description": "Power output in kW"
+    },
+    "temperature": {
+      "type": "number",
+      "description": "Panel temperature in \u00b0C"
+    },
+    "irradiance": {
+      "type": "number",
+      "description": "Solar irradiance W/m\u00b2"
+    },
+    "ambient_temp": {
+      "type": "number",
+      "description": "Ambient temperature in \u00b0C"
+    },
+    "dust_level": {
+      "type": "number",
+      "description": "Dust sensor reading 0-100"
+    },
+    "energy_yield": {
+      "type": "number",
+      "description": "Energy produced in kWh"
+    }
+  },
+  "required": [
+    "site_id",
+    "timestamp"
+  ]
+}

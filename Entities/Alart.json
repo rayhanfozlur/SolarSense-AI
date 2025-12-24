@@ -1,0 +1,65 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "site_id": {
+      "type": "string"
+    },
+    "site_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "inverter_failure",
+        "panel_degradation",
+        "soiling",
+        "temperature_stress",
+        "communication_loss",
+        "anomaly"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "warning",
+        "info"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "predicted_failure_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time_to_failure_days": {
+      "type": "number"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "AI prediction confidence 0-100"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "acknowledged",
+        "resolved"
+      ]
+    },
+    "recommended_action": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "site_id",
+    "type",
+    "severity",
+    "title"
+  ]
+}

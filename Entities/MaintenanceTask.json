@@ -1,0 +1,69 @@
+{
+  "name": "MaintenanceTask",
+  "type": "object",
+  "properties": {
+    "site_id": {
+      "type": "string"
+    },
+    "site_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "urgent",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "cleaning",
+        "inspection",
+        "repair",
+        "replacement",
+        "calibration"
+      ]
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ]
+    },
+    "estimated_cost": {
+      "type": "number"
+    },
+    "assigned_to": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "site_id",
+    "title",
+    "priority",
+    "task_type"
+  ]
+}

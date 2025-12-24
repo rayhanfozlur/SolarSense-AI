@@ -1,0 +1,56 @@
+{
+  "name": "Prediction",
+  "type": "object",
+  "properties": {
+    "site_id": {
+      "type": "string"
+    },
+    "component_type": {
+      "type": "string",
+      "enum": [
+        "inverter",
+        "panel",
+        "battery",
+        "sensor",
+        "wiring"
+      ]
+    },
+    "component_id": {
+      "type": "string"
+    },
+    "prediction_type": {
+      "type": "string",
+      "enum": [
+        "failure",
+        "degradation",
+        "efficiency_loss",
+        "maintenance_due"
+      ]
+    },
+    "probability": {
+      "type": "number",
+      "description": "Failure probability 0-100"
+    },
+    "remaining_useful_life_days": {
+      "type": "number"
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "contributing_factors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "model_version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "site_id",
+    "component_type",
+    "prediction_type",
+    "probability"
+  ]
+}
